@@ -20,7 +20,7 @@ int main(){
     
     cout<<"size of vector is "<< vec.size() <<endl;
     
-    vec.pop_back();
+    vec.pop_item();
 
     cout<<"First elememt is : "<<vec.front()<<endl;
 
@@ -30,6 +30,9 @@ int main(){
     cout<<"Capacity of vector is "<< vec.capacity() <<endl;
 
     cout<<"Element of vector are :"<<endl;
+    for(int i : vec){
+        i = i*2;
+    }
     for(int i : vec){
         cout<<i<<endl;
     }
