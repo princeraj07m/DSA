@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.port": 5501,
+    "files.associations": {
+        "*.ejs": "html",
+        "MLTable": "yaml",
+        "*.rmd": "markdown",
+        "array": "cpp",
+        "iostream": "cpp"
+    }
+}

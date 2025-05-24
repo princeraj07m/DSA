@@ -19,7 +19,7 @@ int main(){
     num.push_back(4);
     
     cout<<"size of vector is "<< num.size() <<endl;
-    
+    cout<<"capacity of vector is "<< num.capacity() <<endl;
     num.pop_back();
 
     cout<<"First elememt is : "<< num.front()<<endl;
