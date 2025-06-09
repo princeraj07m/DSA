@@ -5,48 +5,25 @@ using namespace std;
 struct Node {
     int data;
     Node* next;
-    Node(int val) : data(val), next(nullptr) {}
+     Node(int val){
+            data = val;
+            next = NULL;
+        }
 };
 
 Node* findMiddle(Node* head) {
-    if (!head) return nullptr;
+    if (head == NULL || head->next == NULL) return NULL;
     Node* slow = head;
     Node* fast = head;
-    Node* prev = nullptr;
+    // Node* prev = nullptr;
 
-    while (fast && fast->next) {
+    while(fast != NULL && fast -> next != NULL ){
         fast = fast->next->next;
-        Node* next = slow->next;
-        slow->next = prev;
-        prev = slow;
-        slow = next;
+        slow = slow ->next;
     }
-
-    if (fast) {
-        // Odd length list
-        cout << "Middle element: " << slow->data << endl;
-        cout << "Reversed first half: ";
-        printList(prev);
-        cout << "Second half: ";
-        printList(slow);
-    } else {
-        // Even length list
-        cout << "Middle elements: " << prev->data << " and " << slow->data << endl;
-        cout << "Reversed first half: ";
-        printList(prev);
-        cout << "Second half: ";
-        printList(slow);
-    }
-
+    cout<<slow->data<<endl;
     return slow;
-}
 
-void printList(Node* head) {
-    while (head) {
-        cout << head->data << " ";
-        head = head->next;
-    }
-    cout << endl;
 }
 
 int main() {
@@ -55,6 +32,8 @@ int main() {
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
     head->next->next->next->next = new Node(5);
+    head->next->next->next->next->next = new Node(6);
+    head->next->next->next->next->next->next = new Node(7);
 
     findMiddle(head);
 
