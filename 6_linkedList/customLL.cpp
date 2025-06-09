@@ -109,7 +109,7 @@ class List {
             int pos = 1;
                 while(temp != NULL){
                     if(temp -> data == val){
-                        cout<<pos;
+                        cout<<pos<<endl;
                         return;
                     }
                     temp = temp->next;
@@ -130,6 +130,20 @@ class List {
                 }
                 cout<<"NULL"<<endl;
         }
+
+        //Reverse a linked list 
+        void reverse(){
+            Node* prev = NULL;
+            Node* curr = head;
+            Node* next = NULL;
+            while(curr != NULL){
+                next = curr ->next;
+                curr -> next = prev;
+                prev = curr;
+                curr = next; 
+        }
+        head = prev;
+        }
        
 };
 
@@ -139,16 +153,21 @@ int main() {
     ll.push_front(1);   // 1 -> NULL
     ll.push_front(2);   // 2 -> 1 -> NULL
     ll.push_front(3);   // 3 -> 2 -> 1 -> NULL
-    ll.push_back(2);    // 3 -> 2 -> 1 -> 2 -> NULL
-    ll.push_back(3);    // 3 -> 2 -> 1 -> 2 -> 3 -> NULL
+    // ll.push_back(2);    // 3 -> 2 -> 1 -> 2 -> NULL
+    // ll.push_back(3);    // 3 -> 2 -> 1 -> 2 -> 3 -> NULL
 
     ll.printll();
 
-    ll.pop_front();    // 2 -> 1 -> 2 -> 3 -> NULL
-    ll.printll();
-    ll.pop_last();     // 2 -> 1 -> 2 -> NULL
-    ll.printll();
-    ll.search(1);  // search for element in linked list
+    // ll.pop_front();    // 2 -> 1 -> 2 -> 3 -> NULL
 
+    // ll.printll();
+
+    // ll.pop_last();     // 2 -> 1 -> 2 -> NULL
+
+    // ll.printll();
+
+    // ll.search(1);  // search for element in linked list
+    ll.reverse();   // 2 -> 1 -> 2 -> NULL
+    ll.printll();
     return 0;
 }
