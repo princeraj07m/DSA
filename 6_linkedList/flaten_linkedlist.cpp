@@ -23,15 +23,19 @@ Node* flattenLinkedList(Node* head) {
         while(curr!=NULL){
             if(curr->child != NULL){
                 Node* next = curr ->next;
+                
+                // Flatten the child list 
                 curr ->next = flattenLinkedList(curr->child);
                 curr ->next ->prev = curr;
                 curr->child = nullptr;
-                // if(curr->next){
-                    Node* tail = curr;
+                Node* tail = curr;
+
+                // Find the tail of the current flattened list
                 while(tail->next != NULL){
                     tail = tail -> next;
-                // }
                 }
+
+                // Connect the tail of the current flattened list to the next node
                 tail -> next = flattenLinkedList(next);
                 if(tail->next != NULL){
                 tail ->next ->prev = tail;
