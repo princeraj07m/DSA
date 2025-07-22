@@ -35,6 +35,17 @@ public:
 
 };
 
-int main(){
-    
+int main() {
+    mystack st;
+
+    st.push(10);
+    st.push(20);
+    st.push(30);
+
+    cout << "Top: " << st.top() << endl;  // Should be 30
+    cout << "Pop: " << st.pop() << endl;  // Should pop 30
+    cout << "Top: " << st.top() << endl;  // Should be 20
+    cout << "Is Empty? " << (st.empty() ? "Yes" : "No") << endl;
+
+    return 0;
 }
