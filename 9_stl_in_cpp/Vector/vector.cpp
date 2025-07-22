@@ -49,11 +49,15 @@ int main() {
 
 
     // insert method
-
+    v.insert(v.end(),0);
+    display(v);  
+    
     //clear method
+    v.clear();
+    display(v);  
 
     //empty method
-
+    cout<<v.empty()<<endl;
 
 
     // iterators in vector

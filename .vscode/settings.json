@@ -5,6 +5,7 @@
         "MLTable": "yaml",
         "*.rmd": "markdown",
         "array": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp"
     }
 }
