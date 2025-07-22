@@ -51,7 +51,7 @@ If it made you chuckle or helped you debug, go ahead and hit ⭐ up there. Else,
 
 > "DSA is not tough, your dedication is weak." — _Some wise coder_
 
-So put on your debugging goggles, write some clean code, and **earn that AC**.
+So put on your debugging goggles, write some clean code.
 
 ---
 
